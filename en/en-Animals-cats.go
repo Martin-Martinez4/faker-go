@@ -1,4 +1,4 @@
-package main
+package en
 
 type Cats = []string
 
