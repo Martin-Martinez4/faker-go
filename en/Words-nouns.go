@@ -1,6 +1,6 @@
 package english
 
-type noun string
+type noun = string
 
 var nouns = []noun{
 	"time",

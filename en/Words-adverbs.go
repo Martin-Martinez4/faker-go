@@ -1,6 +1,6 @@
 package english
 
-type adverb string
+type adverb = string
 
 var adverbs = []adverb{
 	"boldly",

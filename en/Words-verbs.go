@@ -1,6 +1,6 @@
 package english
 
-type verb string
+type verb = string
 
 var baseverbs = []verb{
 	"abash",
