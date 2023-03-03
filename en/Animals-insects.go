@@ -1,8 +1,8 @@
-package main
+package english
 
-type Insects = []string
+type Insect = string
 
-var insects = Insects{
+var insects = []Insect{
 	"Admiral Butterfly",
 	"Ambush Bug",
 	"Aphid",

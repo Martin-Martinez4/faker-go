@@ -1,8 +1,8 @@
-package main
+package english
 
-type Dogs = []string
+type Dog = string
 
-var dogs = Dogs{
+var dogs = []Dog{
 	"Affenpinscher",
 	"Afghan Hound",
 	"Airedale Terrier",

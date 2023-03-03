@@ -1,4 +1,4 @@
-package main
+package english
 
 type Colorspaces struct {
 	hsl  string

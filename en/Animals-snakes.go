@@ -1,8 +1,8 @@
-package main
+package english
 
-type Snakes = []string
+type Snake = string
 
-var snakes = Snakes{
+var snakes = []Snake{
 	"Viper Adder",
 	"Common Adder",
 	"Death Adder",

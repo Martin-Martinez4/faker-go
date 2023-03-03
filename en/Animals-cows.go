@@ -1,8 +1,8 @@
-package main
+package english
 
-type Cows = []string
+type Cow = string
 
-var cows = Cows{
+var cows = []Cow{
 	"Aberdeen Angus",
 	"Africander",
 	"Aubrac",

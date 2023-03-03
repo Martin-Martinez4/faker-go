@@ -1,7 +1,6 @@
-package main
+package english
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -15,6 +14,11 @@ func TestGenerateRandIntBelowMaximum(t *testing.T) {
 	}{
 		{maximum: 1, seed: 1},
 		{maximum: 10, seed: 1},
+		{maximum: 10, seed: 1},
+		{maximum: 10, seed: 8},
+		{maximum: 10, seed: 3},
+		{maximum: 10, seed: 4},
+		{maximum: 10, seed: 6},
 		{maximum: 100, seed: 10},
 		{maximum: 10, seed: 1243},
 		{maximum: 10000, seed: 1564},
@@ -28,10 +32,6 @@ func TestGenerateRandIntBelowMaximum(t *testing.T) {
 		if got >= tc.maximum || got < 0 || got != GenerateRandIntBelowMaximum(tc.maximum, tc.seed) {
 
 			t.Errorf("\n\033[31m"+"got %v", got)
-
-		} else {
-
-			fmt.Printf("got: %v, max was: %v\n", got, tc.maximum)
 
 		}
 
@@ -61,10 +61,6 @@ func TestRandomFloatBetweenTwoNumbers(t *testing.T) {
 		if got > float64(tc.maximum) || got < float64(tc.minimum) || got != RandomFloatBetweenTwoNumbers(tc.minimum, tc.maximum, tc.seed) {
 
 			t.Errorf("\n\033[31m"+"got: %v, min was: %v, max was: %v\n", got, tc.minimum, tc.maximum)
-
-		} else {
-
-			fmt.Printf("got: %v, min was: %v, max was: %v\n", got, tc.minimum, tc.maximum)
 
 		}
 

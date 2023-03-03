@@ -1,131 +1,109 @@
-package main
-
-import "errors"
+package english
 
 type Animals struct {
-	Bears     *Bears
-	Birds     *Birds
-	Cats      *Cats
-	Cetaceans *Cetaceans
-	Cows      *Cows
-	Dogs      *Dogs
-	Fishes    *Fishes
-	Insects   *Insects
-	Monkeys   *Monkeys
-	Rodents   *Rodents
-	Snakes    *Snakes
-	Turtles   *Turtles
+	bears          *[]Bear
+	birds          *[]Bird
+	cats           *[]Cat
+	cetaceans      *[]Cetacean
+	cows           *[]Cow
+	dogs           *[]Dog
+	fishes         *[]Fish
+	genericanimals *[]GenericAnimal
+	insects        *[]Insect
+	monkeys        *[]Monkey
+	rodents        *[]Rodent
+	snakes         *[]Snake
+	turtles        *[]Turtle
 }
 
 var animals = Animals{
-	Bears:     &bears,
-	Birds:     &birds,
-	Cats:      &cats,
-	Cetaceans: &cetaceans,
-	Cows:      &cows,
-	Dogs:      &dogs,
-	Fishes:    &fishes,
-	Insects:   &insects,
-	Monkeys:   &monkeys,
-	Rodents:   &rodents,
-	Snakes:    &snakes,
-	Turtles:   &turtles,
+	bears:          &bears,
+	birds:          &birds,
+	cats:           &cats,
+	cetaceans:      &cetaceans,
+	cows:           &cows,
+	dogs:           &dogs,
+	fishes:         &fishes,
+	genericanimals: &genericanimals,
+	insects:        &insects,
+	monkeys:        &monkeys,
+	rodents:        &rodents,
+	snakes:         &snakes,
+	turtles:        &turtles,
 }
 
-func (a *Animals) Bear() string {
+func (e *EnDict) Animal(seed_optional ...int64) string {
 
-	index := GenerateRandIntBelowMaximum(len(*a.Bears))
-	return (*a.Bears)[index]
-}
-
-func (a *Animals) Bird() string {
-
-	index := GenerateRandIntBelowMaximum(len(*a.Birds))
-	return (*a.Birds)[index]
-}
-
-func (a *Animals) Cat() (string, error) {
-
-	if len(*a.Cats) > 0 {
-
-		index := GenerateRandIntBelowMaximum(len(*a.Cats))
-		return (*a.Cats)[index], nil
-
-	} else {
-
-		return "", errors.New("Cat list is empty")
-	}
+	return RandomEntryFromSlice(e.genericanimals, seed_optional...)
 
 }
 
-func (a *Animals) Cow() string {
+func (e *EnDict) Bear(seed_optional ...int64) string {
 
-	index := GenerateRandIntBelowMaximum(len(*a.Cows))
+	return RandomEntryFromSlice(e.bears, seed_optional...)
+}
 
-	return (*a.Cows)[index]
+func (e *EnDict) Bird(seed_optional ...int64) string {
+
+	return RandomEntryFromSlice(e.birds, seed_optional...)
+}
+
+func (e *EnDict) Cat(seed_optional ...int64) string {
+
+	return RandomEntryFromSlice(e.cats, seed_optional...)
 
 }
 
-func (a *Animals) Cetacean() string {
+func (e *EnDict) Cow(seed_optional ...int64) string {
 
-	index := GenerateRandIntBelowMaximum(len(*a.Cetaceans))
-
-	return (*a.Cetaceans)[index]
+	return RandomEntryFromSlice(e.cows, seed_optional...)
 
 }
 
-func (a *Animals) Dog() string {
+func (e *EnDict) Cetacean(seed_optional ...int64) string {
 
-	index := GenerateRandIntBelowMaximum(len(*a.Dogs))
-
-	return (*a.Dogs)[index]
+	return RandomEntryFromSlice(e.cetaceans, seed_optional...)
 
 }
 
-func (a *Animals) Fish() string {
+func (e *EnDict) Dog(seed_optional ...int64) string {
 
-	index := GenerateRandIntBelowMaximum(len(*a.Fishes))
-
-	return (*a.Fishes)[index]
+	return RandomEntryFromSlice(e.dogs, seed_optional...)
 
 }
 
-func (a *Animals) Insect() string {
+func (e *EnDict) Fish(seed_optional ...int64) string {
 
-	index := GenerateRandIntBelowMaximum(len(*a.Insects))
-
-	return (*a.Insects)[index]
+	return RandomEntryFromSlice(e.fishes, seed_optional...)
 
 }
 
-func (a *Animals) Monkey() string {
+func (e *EnDict) Insect(seed_optional ...int64) string {
 
-	index := GenerateRandIntBelowMaximum(len(*a.Monkeys))
-
-	return (*a.Monkeys)[index]
+	return RandomEntryFromSlice(e.insects, seed_optional...)
 
 }
 
-func (a *Animals) Rodent() string {
+func (e *EnDict) Monkey(seed_optional ...int64) string {
 
-	index := GenerateRandIntBelowMaximum(len(*a.Rodents))
-
-	return (*a.Rodents)[index]
+	return RandomEntryFromSlice(e.monkeys, seed_optional...)
 
 }
 
-func (a *Animals) Snake() string {
+func (e *EnDict) Rodent(seed_optional ...int64) string {
 
-	index := GenerateRandIntBelowMaximum(len(*a.Snakes))
-
-	return (*a.Snakes)[index]
+	return RandomEntryFromSlice(e.rodents, seed_optional...)
 
 }
 
-func (a *Animals) Turtle() string {
+func (e *EnDict) Snake(seed_optional ...int64) string {
 
-	index := GenerateRandIntBelowMaximum(len(*a.Turtles))
+	return RandomEntryFromSlice(e.snakes, seed_optional...)
 
-	return (*a.Turtles)[index]
+}
+
+func (e *EnDict) Turtle(seed_optional ...int64) string {
+
+	return RandomEntryFromSlice(e.turtles, seed_optional...)
 
 }

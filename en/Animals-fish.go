@@ -1,8 +1,8 @@
-package main
+package english
 
-type Fishes = []string
+type Fish = string
 
-var fishes = Fishes{
+var fishes = []Fish{
 	"Gray Whale",
 	"Pygmy Right Whale",
 	"Right Whale",

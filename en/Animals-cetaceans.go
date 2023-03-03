@@ -1,8 +1,8 @@
-package main
+package english
 
-type Turtles = []string
+type Cetacean = string
 
-var turtles = Turtles{
+var cetaceans = []Cetacean{
 	"African Helmeted Turtle",
 	"Alabama Red-Bellied Cooter",
 	"Alligator Snapping Turtle",

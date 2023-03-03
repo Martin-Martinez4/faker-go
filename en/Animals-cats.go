@@ -1,8 +1,8 @@
-package main
+package english
 
-type Cats = []string
+type Cat = string
 
-var cats = Cats{
+var cats = []Cat{
 	"Abyssinian Cat",
 	"American Bobtail",
 	"American Curl",
@@ -51,7 +51,7 @@ var cats = Cats{
 	"Pixie-bob",
 	"Ragamuffin",
 	"Ragdoll",
-	"Russian BlueRussian Blue",
+	"Russian Blue",
 	"Safari",
 	"Savannah",
 	"Scottish Fold",

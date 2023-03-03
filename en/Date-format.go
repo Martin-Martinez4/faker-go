@@ -1,4 +1,4 @@
-package main
+package english
 
 type Dateformat string
 

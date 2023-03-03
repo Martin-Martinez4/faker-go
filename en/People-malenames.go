@@ -1,8 +1,8 @@
-package main
+package english
 
-type MaleFirstNames = []string
+type MaleName = string
 
-var maleFirstNames = MaleFirstNames{
+var malenames = []MaleName{
 	"Liam",
 	"Noah",
 	"Oliver",

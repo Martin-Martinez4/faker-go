@@ -1,8 +1,8 @@
-package main
+package english
 
-type Birds = []string
+type Bird = string
 
-var birds = Birds{
+var birds = []Bird{
 	"Adelie Penguin",
 	"African Fish Eagle",
 	"African Grey Parrot",

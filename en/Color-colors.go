@@ -1,8 +1,8 @@
-package main
+package english
 
-type ColorNames = []string
+type colorname = string
 
-var colornames = ColorNames{
+var colornames = []colorname{
 	"aliceblue",
 	"antiquewhite",
 	"aqua",

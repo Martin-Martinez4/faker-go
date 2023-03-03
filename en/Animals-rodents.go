@@ -1,8 +1,8 @@
-package main
+package english
 
-type Rodents = []string
+type Rodent = string
 
-var rodents = Rodents{
+var rodents = []Rodent{
 	"Anomalure",
 	"Spring Hare",
 	"Beaver",

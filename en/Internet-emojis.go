@@ -1,8 +1,8 @@
-package main
+package english
 
-type Emojis = []string
+type Emoji = string
 
-var emojis = Emojis{
+var emojis = []Emoji{
 	"🥰",
 	"😍",
 	"🤩",

@@ -1,8 +1,8 @@
-package main
+package english
 
-type Monkeys = []string
+type Monkey = string
 
-var monkeys = Monkeys{
+var monkeys = []Monkey{
 	"Agile Mangabey",
 	"Allen’S Swamp Monkey",
 	"Alta Floresta Titi",

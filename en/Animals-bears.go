@@ -1,8 +1,8 @@
-package main
+package english
 
-type Bears = []string
+type Bear = string
 
-var bears = Bears{
+var bears = []Bear{
 	"Giant Panda",
 	"Spectacled Bear",
 	"Sun Bear",
